@@ -22,7 +22,7 @@ const data={
     password:req.body.password,
     email:req.body.email
 }
-await collection.insertMany(data);
+await collection.insertOne(data);
 res.render("home");
 })
 
