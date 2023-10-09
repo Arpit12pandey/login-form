@@ -7,7 +7,7 @@ app.use(express.json());
 app.set("view engine", "hbs");
 const templatepath = path.join(__dirname, '../templates');
 app.set("views", templatepath);
-//used to parse incoming HTTP requests with URL encoded payloads.commonly used to parse form data submitted via HTTP post requests
+//used to parse incoming HTTP requests with URL encoded payloads.commonly used to parse form data submitted via HTTP
 app.use(express.urlencoded({extended:false}))
 
 
@@ -23,7 +23,7 @@ const data={
     password:req.body.password,
     email:req.body.email
 }
-await collection.insertOne(data);
+await collection.insertMany(data);
 res.render("home");
 })
 
