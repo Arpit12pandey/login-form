@@ -7,6 +7,7 @@ app.use(express.json());
 app.set("view engine", "hbs");
 const templatepath = path.join(__dirname, '../templates');
 app.set("views", templatepath);
+//used to parse incoming HTTP requests with URL encoded payloads.commonly used to parse form data submitted via HTTP post requests
 app.use(express.urlencoded({extended:false}))
 
 
