@@ -23,8 +23,8 @@ const data={
     password:req.body.password,
     email:req.body.email
 }
-await collection.insertMany(data);
-res.render("home");
+await collection.insertOne(data);
+res.render("home",{name:req.body.name});
 })
 
 app.listen(5000, () => {
